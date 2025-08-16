@@ -35,13 +35,11 @@ section.lead {
 code, pre { font-size: 0.9em; }
 pre code { line-height: 1.35; }
 
-/* Utility classes for slide-level customization */
 section.white-text { color: white; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
 section.narrow ul { max-width: 80%; }
 </style>
 
 <!-- _class: lead -->
-
 # Platform X — Product Documentation
 
 Modern, maintainable docs deck powered by **Marp**.
@@ -92,7 +90,7 @@ $$
 
 ---
 
-<!-- _backgroundImage: "https://images.unsplash.com/photo-1508780709619-79562169bc64" -->
+<!-- _backgroundImage: url(https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1600&q=80) -->
 <!-- _class: white-text -->
 # Visual Design
 
