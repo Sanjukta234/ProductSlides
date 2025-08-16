@@ -41,6 +41,7 @@ section.narrow ul { max-width: 80%; }
 </style>
 
 <!-- _class: lead -->
+
 # Platform X — Product Documentation
 
 Modern, maintainable docs deck powered by **Marp**.
@@ -92,9 +93,10 @@ $$
 ---
 
 <!-- _backgroundImage: "https://images.unsplash.com/photo-1508780709619-79562169bc64" -->
+<!-- _class: white-text -->
 # Visual Design
 
-Slide with background image to emphasize branding.
+This slide has a **background image** to emphasize branding and aesthetics.
 
 ---
 
