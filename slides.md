@@ -1,4 +1,3 @@
----
 marp: true
 math: true
 paginate: true
@@ -6,104 +5,139 @@ theme: fintech-docs
 author: "Technical Writer"
 title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
-footer: "Page [$page]/[$total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)"
----
+footer: "Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in"
 
-<style>
-/* @theme fintech-docs */
-@import 'gaia';
+Platform X — Product Documentation
 
-:root {
-  --accent: #4f46e5; /* indigo */
-  --ink: #e5e7eb;    /* gray-200 */
-  --bg: #0b1020;
-}
+Modern, maintainable docs deck powered by Marp.
 
-section {
-  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  letter-spacing: 0.1px;
-}
+Contact: 22f1001636@ds.study.iitm.ac.in
 
-h1, h2, h3 { color: var(--ink); }
-strong { color: var(--accent); }
+Why Marp for Product Docs?
 
-section.lead {
-  background: radial-gradient(1200px 600px at 80% 10%, #1f2937, #0b1020);
-  color: var(--ink);
-}
+Single source of truth (Markdown) in version control
 
-code, pre { font-size: 0.9em; }
-pre code { line-height: 1.35; }
+Export to HTML / PDF / PPTX via CLI or VS Code extension
 
-section.white-text { color: white; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
-section.narrow ul { max-width: 80%; }
-</style>
+Theming with CSS, math (KaTeX), diagram-friendly
 
-<!-- _class: lead -->
-# Platform X — Product Documentation
+CI-ready for docs publishing
 
-Modern, maintainable docs deck powered by **Marp**.
+Command:
 
-**Contact:** [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)
+# Install
+npm install -D @marp-team/marp-cli
 
----
+# Convert to HTML and PDF
+npx marp slides.md -o docs.html
+npx marp slides.md --pdf -o docs.pdf
 
-## Table of Contents
+Architecture Overview
 
-1. Introduction  
-2. Key Features  
-3. Algorithmic Complexity  
-4. Visual Design  
-5. Code Example
+Microservices: Auth, Ingestion, Compute, API Gateway
 
----
+Storage: S3-compatible object store, Postgres, Redis
 
-## Introduction
+Observability: OpenTelemetry + Prometheus + Grafana
 
-Platform X is designed to streamline enterprise workflows.  
+Version everything: API schemas, migrations, and configs.
 
-**Goals:**  
-- Reduce operational costs  
-- Increase productivity  
-- Enhance decision-making with analytics
 
----
 
-## Key Features
+Request Lifecycle
 
-- **Scalable architecture**
-- **Real-time analytics**
-- **Secure integrations**
-- **User-friendly dashboards**
+Client → API Gateway (JWT)
 
----
+Router → Service (rate-limit, authz)
 
-## Algorithmic Complexity
+Service → DB + Cache (CQRS pattern)
 
-Mathematical example for algorithm cost:
+Emit traces/metrics/logs
 
-$$
-T(n) = 5n^2 + 3n + 2
-$$
+API Contract (OpenAPI excerpt)
 
-**Big-O:** \( O(n^2) \)
+openapi: 3.0.3
+info:
+  title: Platform X API
+  version: 1.2.0
+paths:
+  /v1/jobs:
+    post:
+      summary: Submit job
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobRequest'
+      responses:
+        '202': { description: Accepted }
 
----
+SDK Usage (TypeScript)
 
-<!-- _backgroundImage: url(https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1600&q=80) -->
-<!-- _class: white-text -->
-# Visual Design
+import { Client } from '@platform-x/sdk';
 
-This slide has a background image to emphasize branding and aesthetics.
+const client = new Client({ token: process.env.TOKEN! });
+const job = await client.jobs.submit({ task: 'ingest', source: 's3://bucket/key' });
+console.log('Job submitted:', job.id);
 
----
+Release Process (SemVer)
 
-## Code Example
+feat: minor, fix: patch, breaking: major
 
-```python
-def compound_interest(principal, rate, times, years):
-    # Calculate compound interest
-    return principal * (1 + rate / times) ** (times * years)
+Automated changelog from conventional commits
 
-amount = compound_interest(1000, 0.05, 4, 5)
-print(f"Final amount: {amount:.2f}")
+Release artifacts: Docker image, CLI, SDK
+
+# Example release
+pnpm changeset version && pnpm -r build && pnpm changeset publish
+
+Mathematical Notes (Complexity & Throughput)
+
+We analyze ingestion with batch size $b$, items $n$, per-item cost $c$, and parallelism $p$.
+
+Time complexity: 
+
+Throughput: 
+
+Backpressure threshold (inline): 
+
+Operational Runbook (Excerpt)
+
+Health checks: /live, /ready
+
+SLOs: Availability 99.9%, P95 latency ≤ 250ms
+
+Rollbacks: Blue/Green with DB schema guards
+
+Tip: Tag incidents with component: and severity: labels.
+
+Styling with Directives
+
+This deck uses:
+
+theme: fintech-docs (custom CSS via @theme)
+
+paginate: true with footer Page $[page]/$[total]
+
+Slide class directives: <!-- _class: lead -->, white-text
+
+Background image via ![bg](...)
+
+math: true for formulas
+
+Appendix — CLI Cheatsheet
+
+# Watch mode for local preview
+npx marp slides.md --server
+
+# Export to PPTX
+npx marp slides.md --pptx -o slides.pptx
+
+# Use custom theme from this file
+npx marp slides.md --theme-set slides.md -o docs.html
+
+Thank You
+
+Questions? 22f1001636@ds.study.iitm.ac.in
+
