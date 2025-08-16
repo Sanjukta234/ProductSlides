@@ -6,7 +6,7 @@ theme: fintech-docs
 author: "Technical Writer"
 title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
-footer: "Page [$page]/[$total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)"
+footer: "Page $\[page]/$\[total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)"
 ---
 
 <style>
@@ -41,6 +41,7 @@ section.narrow ul { max-width: 80%; }
 </style>
 
 <!-- _class: lead -->
+
 # Platform X — Product Documentation
 
 Modern, maintainable docs deck powered by **Marp**.
@@ -49,61 +50,33 @@ Modern, maintainable docs deck powered by **Marp**.
 
 ---
 
-## Table of Contents
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0') -->
+<!-- _backgroundSize: cover -->
+<!-- _class: white-text -->
 
-1. Introduction  
-2. Key Features  
-3. Algorithmic Complexity  
-4. Visual Design  
-5. Code Example
+# Vision & Strategy
 
----
-
-## Introduction
-
-Platform X is designed to streamline enterprise workflows.  
-
-**Goals:**  
-- Reduce operational costs  
-- Increase productivity  
-- Enhance decision-making with analytics
-
----
-
-## Key Features
-
-- **Scalable architecture**
-- **Real-time analytics**
-- **Secure integrations**
-- **User-friendly dashboards**
+Our platform empowers businesses with **real-time analytics** and **AI-driven insights**.  
+We focus on scalability, security, and seamless integration.
 
 ---
 
 ## Algorithmic Complexity
 
-Mathematical example for algorithm cost:
+We often analyze performance using Big-O notation:
 
 $$
-T(n) = 5n^2 + 3n + 2
+T(n) = O(n \log n)
 $$
 
-**Big-O:** \( O(n^2) \)
-
----
-
-<!-- _backgroundImage: url('https://images.unsplash.com/photo-1508780709619-79562169bc64') -->
-# Visual Design
-
-Slide with background image to emphasize branding.
+Example: Merge sort has complexity **O(n log n)** due to the divide-and-conquer approach.
 
 ---
 
 ## Code Example
 
 ```python
-def compound_interest(principal, rate, times, years):
-    # Calculate compound interest
-    return principal * (1 + rate / times) ** (times * years)
+def compound_interest(principal, rate, time):
+    return principal * (1 + rate) ** time
 
-amount = compound_interest(1000, 0.05, 4, 5)
-print(f"Final amount: {amount:.2f}")
+print(compound_interest(1000, 0.05, 10))
