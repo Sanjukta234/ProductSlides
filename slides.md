@@ -6,7 +6,7 @@ theme: fintech-docs
 author: "Technical Writer"
 title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
-footer: "Page $\[page]/$\[total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)"
+footer: 'Page $[page]/$[total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)'
 ---
 
 <style>
@@ -41,7 +41,6 @@ section.narrow ul { max-width: 80%; }
 </style>
 
 <!-- _class: lead -->
-
 # Platform X — Product Documentation
 
 Modern, maintainable docs deck powered by **Marp**.
@@ -50,33 +49,44 @@ Modern, maintainable docs deck powered by **Marp**.
 
 ---
 
-<!-- _backgroundImage: url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0') -->
-<!-- _backgroundSize: cover -->
+## Introduction
+
+This presentation covers:
+
+- Product overview
+- Key features
+- API integration
+- Security best practices
+- Performance benchmarks
+
+---
+
+<!-- _backgroundImage: "https://images.unsplash.com/photo-1554224154-22dec7ec8818" -->
 <!-- _class: white-text -->
+# Background Image Example
 
-# Vision & Strategy
-
-Our platform empowers businesses with **real-time analytics** and **AI-driven insights**.  
-We focus on scalability, security, and seamless integration.
+This slide has a full background image for visual impact.
 
 ---
 
 ## Algorithmic Complexity
 
-We often analyze performance using Big-O notation:
+Example of a **mathematical equation** in Marp (Big-O notation):
 
 $$
 T(n) = O(n \log n)
 $$
 
-Example: Merge sort has complexity **O(n log n)** due to the divide-and-conquer approach.
-
 ---
 
-## Code Example
+## Sample Code
 
 ```python
+# Author: Technical Writer
+# Contact: 22f1001636@ds.study.iitm.ac.in
+
 def compound_interest(principal, rate, time):
+    """Calculate compound interest."""
     return principal * (1 + rate) ** time
 
-print(compound_interest(1000, 0.05, 10))
+print(compound_interest(1000, 0.05, 5))
