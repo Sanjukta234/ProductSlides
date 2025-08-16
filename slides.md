@@ -94,7 +94,7 @@ $$
 <!-- _class: white-text -->
 # Visual Design
 
-This slide has a **background image** to emphasize branding and aesthetics.
+This slide has a background image to emphasize branding and aesthetics.
 
 ---
 
