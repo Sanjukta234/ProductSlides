@@ -6,7 +6,7 @@ theme: fintech-docs
 author: "Technical Writer"
 title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
-footer: 'Page $[page]/$[total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)'
+footer: "Page [$page]/[$total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)"
 ---
 
 <style>
@@ -49,44 +49,61 @@ Modern, maintainable docs deck powered by **Marp**.
 
 ---
 
-## Introduction
+## Table of Contents
 
-This presentation covers:
-
-- Product overview
-- Key features
-- API integration
-- Security best practices
-- Performance benchmarks
+1. Introduction  
+2. Key Features  
+3. Algorithmic Complexity  
+4. Visual Design  
+5. Code Example
 
 ---
 
-<!-- _backgroundImage: "https://images.unsplash.com/photo-1554224154-22dec7ec8818" -->
-<!-- _class: white-text -->
-# Background Image Example
+## Introduction
 
-This slide has a full background image for visual impact.
+Platform X is designed to streamline enterprise workflows.  
+
+**Goals:**  
+- Reduce operational costs  
+- Increase productivity  
+- Enhance decision-making with analytics
+
+---
+
+## Key Features
+
+- **Scalable architecture**
+- **Real-time analytics**
+- **Secure integrations**
+- **User-friendly dashboards**
 
 ---
 
 ## Algorithmic Complexity
 
-Example of a **mathematical equation** in Marp (Big-O notation):
+Mathematical example for algorithm cost:
 
 $$
-T(n) = O(n \log n)
+T(n) = 5n^2 + 3n + 2
 $$
+
+**Big-O:** \( O(n^2) \)
 
 ---
 
-## Sample Code
+<!-- _backgroundImage: "https://images.unsplash.com/photo-1508780709619-79562169bc64" -->
+# Visual Design
+
+Slide with background image to emphasize branding.
+
+---
+
+## Code Example
 
 ```python
-# Author: Technical Writer
-# Contact: 22f1001636@ds.study.iitm.ac.in
+def compound_interest(principal, rate, times, years):
+    # Calculate compound interest
+    return principal * (1 + rate / times) ** (times * years)
 
-def compound_interest(principal, rate, time):
-    """Calculate compound interest."""
-    return principal * (1 + rate) ** time
-
-print(compound_interest(1000, 0.05, 5))
+amount = compound_interest(1000, 0.05, 4, 5)
+print(f"Final amount: {amount:.2f}")
