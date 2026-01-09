@@ -6,16 +6,11 @@ theme: fintech-docs
 author: "Technical Writer"
 title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
-footer: 'Page {{page}}/{{total}} • 22f1001636@ds.study.iitm.ac.in'
+footer: 'Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in'
 ---
-
-
------------------------------------------------------------------------------------------------------------
 
 <style>
 /* @theme fintech-docs */
-@import 'gaia';
-
 :root {
   --accent: #4f46e5; /* indigo */
   --ink: #e5e7eb;    /* gray-200 */
@@ -25,6 +20,8 @@ footer: 'Page {{page}}/{{total}} • 22f1001636@ds.study.iitm.ac.in'
 section {
   font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: 0.1px;
+  background: var(--bg);
+  color: var(--ink);
 }
 
 h1, h2, h3 { color: var(--ink); }
@@ -38,7 +35,6 @@ section.lead {
 code, pre { font-size: 0.9em; }
 pre code { line-height: 1.35; }
 
-/* Utility classes for slide-level customization */
 section.white-text { color: white; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
 section.narrow ul { max-width: 80%; }
 </style>
@@ -69,7 +65,7 @@ npm install -D @marp-team/marp-cli
 # Convert to HTML and PDF
 npx marp slides.md -o docs.html
 npx marp slides.md --pdf -o docs.pdf
-```
+
 
 ---
 
