@@ -9,14 +9,14 @@ description: "Maintainable docs deck using Marp (version-controlled, multi-forma
 footer: 'Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in'
 ---
 
-<style>
+<<style>
 /* @theme fintech-docs */
-@import url('https://unpkg.com/@marp-team/marp-core-theme-gaia/theme/gaia.css');
+/* Import Gaia base theme FIRST */
+@import 'gaia';
 
+/* Custom overrides AFTER import */
 :root {
-  --accent: #4f46e5; /* indigo */
-  --ink: #e5e7eb;    /* gray-200 */
-  --bg: #0b1020;
+  --accent: #4f46e5;
 }
 
 section {
@@ -24,36 +24,24 @@ section {
   letter-spacing: 0.1px;
 }
 
+/* Lead slide styling */
 section.lead {
-  background: radial-gradient(1200px 600px at 80% 10%, #1f2937, #0b1020) !important;
-  color: var(--ink);
+  background: radial-gradient(1200px 600px at 80% 10%, #1f2937, var(--bg-color)) !important;
+  color: #e5e7eb;
 }
 
-h1, h2, h3 { 
-  color: var(--ink); 
-}
+h1, h2, h3 { color: #e5e7eb; }
+strong { color: var(--accent); }
 
-strong { 
-  color: var(--accent); 
-}
+code, pre { font-size: 0.9em; }
+pre code { line-height: 1.35; }
 
-code, pre { 
-  font-size: 0.9em; 
-}
-
-pre code { 
-  line-height: 1.35; 
-}
-
-/* Utility classes */
 section.white-text { 
   color: white !important; 
   text-shadow: 0 2px 6px rgba(0,0,0,.35); 
 }
 
-section.narrow ul { 
-  max-width: 80%; 
-}
+section.narrow ul { max-width: 80%; }
 </style>
 
 
