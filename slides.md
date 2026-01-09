@@ -1,6 +1,4 @@
 ---
-
----
 marp: true
 math: true
 paginate: true
@@ -10,6 +8,7 @@ title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
 footer: 'Page {{page}}/{{total}} • 22f1001636@ds.study.iitm.ac.in'
 ---
+
 
 -----------------------------------------------------------------------------------------------------------
 
