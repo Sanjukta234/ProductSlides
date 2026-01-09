@@ -1,5 +1,6 @@
 ---
 
+---
 marp: true
 math: true
 paginate: true
@@ -7,7 +8,9 @@ theme: fintech-docs
 author: "Technical Writer"
 title: "Product Documentation — Platform X"
 description: "Maintainable docs deck using Marp (version-controlled, multi-format)."
-footer: "Page $\[page]/$\[total] • [22f1001636@ds.study.iitm.ac.in](mailto:22f1001636@ds.study.iitm.ac.in)"
+footer: 'Page {{page}}/{{total}} • 22f1001636@ds.study.iitm.ac.in'
+---
+
 -----------------------------------------------------------------------------------------------------------
 
 <style>
