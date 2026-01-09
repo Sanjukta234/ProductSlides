@@ -9,7 +9,7 @@ description: "Maintainable docs deck using Marp (version-controlled, multi-forma
 footer: 'Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in'
 ---
 
-<<style>
+<style>
 /* @theme fintech-docs */
 /* Import Gaia base theme FIRST */
 @import 'gaia';
