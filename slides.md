@@ -11,67 +11,33 @@ footer: 'Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in'
 
 <style>
 /* @theme fintech-docs */
-/* 1. Import Gaia base theme FIRST */
 @import 'gaia';
 
-/* 2. Custom CSS variables */
 :root {
-  --accent: #4f46e5;        /* Indigo accent */
-  --ink: #e5e7eb;           /* Light gray text */
-  --bg-dark: #0b1020;       /* Dark navy background */
+  --accent: #4f46e5; /* indigo */
+  --ink: #e5e7eb;    /* gray-200 */
+  --bg: #0b1020;
 }
 
-/* 3. Typography & base styling */
 section {
   font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: 0.1px;
 }
 
-/* 4. Lead slide (hero) */
+h1, h2, h3 { color: var(--ink); }
+strong { color: var(--accent); }
+
 section.lead {
-  background: 
-    radial-gradient(1200px 600px at 80% 10%, 
-                    #1f2937 0%, 
-                    var(--bg-dark) 70%) !important;
-  color: var(--ink) !important;
-}
-
-/* 5. Headings & emphasis */
-h1, h2, h3 { 
-  color: var(--ink); 
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-strong { 
-  color: var(--accent) !important; 
-}
-
-/* 6. Code styling */
-code, pre { 
-  font-size: 0.9em; 
-  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
-}
-
-pre code { 
-  line-height: 1.35; 
-}
-
-/* 7. Utility classes */
-section.white-text { 
-  color: white !important; 
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5) !important;
-}
-
-section.narrow ul { 
-  max-width: 80%; 
-  margin: 0 auto;
-}
-
-/* 8. Footer compatibility */
-footer::after {
+  background: radial-gradient(1200px 600px at 80% 10%, #1f2937, #0b1020);
   color: var(--ink);
-  font-size: 0.8em;
 }
+
+code, pre { font-size: 0.9em; }
+pre code { line-height: 1.35; }
+
+/* Utility classes for slide-level customization */
+section.white-text { color: white; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
+section.narrow ul { max-width: 80%; }
 </style>
 
 
