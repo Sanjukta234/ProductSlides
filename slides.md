@@ -11,6 +11,8 @@ footer: 'Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in'
 
 <style>
 /* @theme fintech-docs */
+@import url('https://unpkg.com/@marp-team/marp-core-theme-gaia/theme/gaia.css');
+
 :root {
   --accent: #4f46e5; /* indigo */
   --ink: #e5e7eb;    /* gray-200 */
@@ -20,24 +22,40 @@ footer: 'Page $[page]/$[total] • 22f1001636@ds.study.iitm.ac.in'
 section {
   font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: 0.1px;
-  background: var(--bg);
-  color: var(--ink);
 }
-
-h1, h2, h3 { color: var(--ink); }
-strong { color: var(--accent); }
 
 section.lead {
-  background: radial-gradient(1200px 600px at 80% 10%, #1f2937, #0b1020);
+  background: radial-gradient(1200px 600px at 80% 10%, #1f2937, #0b1020) !important;
   color: var(--ink);
 }
 
-code, pre { font-size: 0.9em; }
-pre code { line-height: 1.35; }
+h1, h2, h3 { 
+  color: var(--ink); 
+}
 
-section.white-text { color: white; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
-section.narrow ul { max-width: 80%; }
+strong { 
+  color: var(--accent); 
+}
+
+code, pre { 
+  font-size: 0.9em; 
+}
+
+pre code { 
+  line-height: 1.35; 
+}
+
+/* Utility classes */
+section.white-text { 
+  color: white !important; 
+  text-shadow: 0 2px 6px rgba(0,0,0,.35); 
+}
+
+section.narrow ul { 
+  max-width: 80%; 
+}
 </style>
+
 
 <!-- _class: lead -->
 
